@@ -11,6 +11,14 @@ async function main(){
     }
   })
 
+  await prisma.user.create({
+    data: {
+      name: 'Deyverson',
+      email: 'dey.verson@email.com',
+      avatarUrl: 'https://github.com/guisaoncella.png',  
+    }
+  })
+
   const pool = await prisma.pool.create({
     data: {
       title: 'Example Pool',
