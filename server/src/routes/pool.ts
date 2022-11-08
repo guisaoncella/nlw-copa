@@ -6,7 +6,6 @@ import { prisma } from "../lib/prisma"
 export async function poolRoutes(fastify: FastifyInstance){
   fastify.get('/pools/count', async () => {
     const count = await prisma.pool.count()
-
     return {count: count}
   })
 
