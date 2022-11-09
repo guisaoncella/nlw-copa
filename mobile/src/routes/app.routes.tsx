@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Find } from "../screens/Find";
 import { New } from "../screens/New";
 import { Pools } from "../screens/Pools";
 import { useTheme } from "native-base";
@@ -26,7 +27,7 @@ export function AppRoutes(){
       },
       tabBarItemStyle: {
         position: 'relative',
-        top: Platform.OS === 'android' ? -5 : 0   
+        top: Platform.OS === 'android' ? -10 : 0   
       }
     }}>
       <Screen
@@ -44,6 +45,14 @@ export function AppRoutes(){
         options={{
           tabBarIcon: ({color}) => <SoccerBall color={color} size={iconSize}/>,
           tabBarLabel: 'Meus bolões'
+        }}
+      />
+
+      <Screen
+        name="find"
+        component={Find}
+        options={{
+          tabBarButton: () => null
         }}
       />
     </Navigator>
