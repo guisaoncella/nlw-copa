@@ -17,7 +17,7 @@ export function Button ({title, type = 'PRIMARY', ...rest}: IProps) {
         bg: type === 'SECONDARY' ? 'red.600' : 'yellow.600'
       }}
       _loading={{
-        _spinner: {color: 'white'}
+        _spinner: {color: type === 'SECONDARY' ? 'white' : 'black'}
       }}
       {...rest}
     >
