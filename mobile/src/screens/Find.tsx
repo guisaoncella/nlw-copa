@@ -17,6 +17,7 @@ export function Find(){
     try {
       setIsLoading(true)  
       if(!code.trim()){
+        setIsLoading(false)
         return toast.show({
           title: 'Informe o código!',
           placement: 'top',
